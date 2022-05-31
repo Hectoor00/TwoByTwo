@@ -1,0 +1,259 @@
+/*colores para usar
+
+
+ <color name="azul">#0E185F</color>
+    <color name="celeste">#2FA4FF</color>
+    <color name="acua">#00FFDD</color>
+    <color name="amarillo">#E8FFC2</color>
+
+*/
+
+/*Reset*/
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    scroll-behavior: smooth;
+}
+
+/*header*/
+header{
+    height: 100px;
+    background: #E8FFC2;
+    padding:  0 50px;
+    color: #0E185F;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    
+
+}
+.logo{
+    width: 75px;
+    height: 75px;
+    text-transform: uppercase;
+    font-weight: 200;
+}
+.menu a{
+    color: #0E185F;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0px 10px;
+    transition: 0.4s;
+    
+    
+}
+.mostrar-menu,
+.esconder-menu{
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+    transition: 0.4s;
+
+}
+
+.mostrar-menu{
+    order: 1;
+}
+
+
+.menu a:hover,
+.mostrar-menu:hover,
+.esconder-menu:hover{
+    border: 1px solid;
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 20px;
+    background: #0E185F;
+    color: #E8FFC2;
+   
+   
+
+}
+#check{
+    display: none;
+}
+
+/*banner*/
+#banner{
+    
+    padding: 0 50px;
+    height: 45vh;
+    background-size: cover;
+    background-position: center;
+}
+
+#banner::before{
+    content: '';
+    background: #0E185F;
+    position: absolute;
+    width: 100%;
+    height: 45vh;
+    left: 0;
+}
+.contenido-banner{
+    position: relative;
+    color: #E8FFC2;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.contenido-banner h3{
+    font-size: 30px;
+    font-weight: 400;
+    padding: 10px 0px;
+}
+
+.contenido-banner h3 span{
+    font-weight: 600;
+}
+.boton-empezar{
+    text-decoration: none;
+    color: #E8FFC2;
+    border-radius: 5px;
+    border: 1px solid #E8FFC2;
+    padding: 20px 40px;
+    align-self: baseline;
+    transition: 0.4s;
+}
+
+
+.boton-empezar:hover{
+    background: #E8FFC2;
+    color: #0E185F;
+    box-shadow: inset 0 -3.50em 0 0 #E8FFC2;
+}
+
+/*Informacion de la App*/
+
+
+.texto{
+    margin: 20px;
+    margin-left: 60px;
+    margin-right: 60px;
+    text-align: justify;
+    display: flex;
+    flex-wrap: wrap;
+    border: 0px solid;
+}
+.informacion{
+    text-align: justify;
+
+    position: relative;
+    color: #fff;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow: hidden;
+
+}
+.informacion p{
+    justify-content: center;
+    text-align: justify;
+    width: 100%;
+    font-size: 30px;
+    padding: 25px;
+}
+
+
+
+/*Desarrolladores*/
+
+#personas{
+    padding: 50px 50px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+#personas img{
+    
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;
+}
+#personas div{
+    
+    padding: 30px 30px;
+
+}
+#personas div h4{
+   
+    color: black;
+    font-size: 20px;
+    margin: 15px 0px;
+}
+
+@media (max-width: 768px) {
+
+    .mostrar-menu,
+    .esconder-menu{
+        display: block;
+    }
+
+    .menu{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #E8FFC2;
+        right: -100%;
+        top: 0;
+        text-align: center;
+        padding: 100px 0px;
+        z-index: 100;
+        transition: 0.8s;
+
+
+    }
+    .menu a{
+        border: 1px solid;
+        display: block;
+        padding: 20px;
+
+    }
+    .esconder-menu{
+        position: absolute;
+        top: 40px;
+        right: 40px;
+        color: #0E185F;
+    }
+    #check:checked ~ .menu{
+        right: 0;
+    }
+
+    .texto{
+        flex-direction: column;
+        font-size: 20px;
+        border:0px solid ;
+    }
+
+    #personas{
+        flex-direction: column;
+        
+    }
+   
+    #personas img{
+    
+        width: 200px;
+        height: 200px;
+        border-radius: 100%;
+       
+    }
+    
+}
+
+@media (max-width: 250x) {
+
+    
+   
+    #personas img{
+        margin-right: -50px;
+        width: 100px;
+        height: 100px;
+        border-radius: 100%;
+       
+    }
+    
+}
